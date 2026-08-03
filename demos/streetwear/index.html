@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Realty ONE Group Apex — Recruiting Site Demo</title>
+<meta name="description" content="Demo recruiting website for Realty ONE Group offices: bold, black-and-gold streetwear style.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#000; color:#fff; font-family:'Open Sans', sans-serif; line-height:1.6; }
+  img { max-width:100%; display:block; }
+  a { color:inherit; text-decoration:none; }
+  .container { max-width:1120px; margin:0 auto; padding:0 1.5rem; }
+  .demo-banner { background:#d8b25c; color:#000; text-align:center; padding:0.6rem 1rem; font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.8rem; letter-spacing:0.06em; text-transform:uppercase; }
+  .demo-banner a { text-decoration:underline; }
+  header { position:sticky; top:0; z-index:50; height:76px; background:#000; border-bottom:1px solid #27272a; }
+  header .container { height:100%; display:flex; align-items:center; justify-content:space-between; }
+  .logo-lockup { display:flex; align-items:center; gap:0.65rem; }
+  .logo-lockup img { height:26px; filter:brightness(0) invert(1); }
+  .logo-lockup .suffix { font-family:'Montserrat',sans-serif; font-weight:800; letter-spacing:0.04em; font-size:1rem; color:#d8b25c; border-left:1px solid rgba(255,255,255,.25); padding-left:0.65rem; }
+  nav a { font-family:'Montserrat',sans-serif; font-size:0.8rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,.8); margin-left:2rem; }
+  nav a:hover { color:#d8b25c; }
+  .btn { display:inline-flex; align-items:center; gap:0.5rem; font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; padding:0.8rem 1.6rem; border-radius:4px; border:2px solid transparent; }
+  .btn-gold { background:#d8b25c; color:#000; }
+  .btn-outline { border-color:rgba(216,178,92,.4); color:#fff; }
+  .hero { padding:6rem 0 5rem; background: radial-gradient(circle at 30% 20%, #1a1a1a, #000 60%); }
+  .eyebrow { font-family:'Montserrat',sans-serif; font-size:0.8rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#d8b25c; margin-bottom:1rem; }
+  h1 { font-family:'Bebas Neue',sans-serif; text-transform:uppercase; font-size:clamp(2.75rem,8vw,6rem); line-height:0.95; letter-spacing:0.01em; }
+  h1 .gold { color:#d8b25c; display:block; }
+  .lead { font-size:1.15rem; color:rgba(255,255,255,.8); max-width:600px; margin-top:1.5rem; }
+  .cta-row { display:flex; gap:1rem; flex-wrap:wrap; margin-top:2.5rem; }
+  section { padding:5rem 0; }
+  .section-heading { text-align:center; max-width:600px; margin:0 auto 3rem; }
+  .section-heading h2 { font-family:'Bebas Neue',sans-serif; text-transform:uppercase; font-size:clamp(2rem,4vw,2.75rem); color:#d8b25c; }
+  .section-heading p { margin-top:1rem; color:rgba(255,255,255,.65); }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1.5rem; }
+  .card { background:#161616; border:2px solid rgba(216,178,92,.2); padding:1.75rem; }
+  .card h3 { font-family:'Montserrat',sans-serif; text-transform:uppercase; font-size:1rem; letter-spacing:0.04em; margin-bottom:0.5rem; }
+  .card p { color:rgba(255,255,255,.65); font-size:0.92rem; }
+  .stats { display:flex; flex-wrap:wrap; justify-content:center; gap:3rem; text-align:center; }
+  .stat b { display:block; font-family:'Bebas Neue',sans-serif; font-size:2.75rem; color:#d8b25c; }
+  .stat span { font-family:'Montserrat',sans-serif; font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,.6); }
+  .testi { background:#161616; border:1px solid #27272a; border-radius:6px; padding:1.75rem; }
+  .testi .quote { font-style:italic; color:rgba(255,255,255,.85); margin-bottom:1.25rem; }
+  .avatar { width:44px; height:44px; border-radius:50%; background:#d8b25c; color:#000; font-family:'Montserrat',sans-serif; font-weight:800; display:flex; align-items:center; justify-content:center; }
+  .agent-row { display:flex; align-items:center; gap:0.85rem; }
+  .name { font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.9rem; text-transform:uppercase; }
+  .role { font-size:0.8rem; color:rgba(255,255,255,.55); }
+  .final { text-align:center; border-top:1px solid #27272a; }
+  .final h2 { font-family:'Bebas Neue',sans-serif; text-transform:uppercase; font-size:clamp(2rem,5vw,3.5rem); }
+  footer { padding:2.5rem 0; text-align:center; border-top:1px solid #27272a; color:rgba(255,255,255,.5); font-size:0.85rem; }
+  @media (max-width:780px){ nav { display:none; } }
+</style>
+</head>
+<body>
+
+<div class="demo-banner">Demo Site &mdash; Realty ONE Group Recruiting Website Concept &nbsp;|&nbsp; <a href="../index.html">Back to Demos</a></div>
+
+<header>
+  <div class="container">
+    <div class="logo-lockup"><img src="../../assets/realty-one-group-corporate-logo.png" alt="Realty ONE Group"><span class="suffix">APEX</span></div>
+    <nav>
+      <a href="#why">Why Apex</a>
+      <a href="#numbers">Numbers</a>
+      <a href="#agents">Agents</a>
+      <a href="#join">Join</a>
+    </nav>
+    <a class="btn btn-gold" href="#join">Apply Now</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">Realty ONE Group Apex</p>
+    <h1>Stop Splitting<span class="gold">Your Paycheck.</span></h1>
+    <p class="lead">100% commission. Real mentorship. Zero corporate nonsense. Keep what you close.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="#join">Apply Now</a>
+      <a class="btn btn-outline" href="#numbers">See the Numbers</a>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Why Agents Go Apex</h2>
+      <p>No desk fees. No politics. Just the tools and backup to actually build something.</p>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>Commission</h3><p>Keep 100% of every deal. No splits, no surprise fees at closing.</p></div>
+      <div class="card"><h3>Mentorship</h3><p>Paired with a top producer from day one, not a training video.</p></div>
+      <div class="card"><h3>Marketing</h3><p>Done-for-you listing marketing and social content, on your brand.</p></div>
+      <div class="card"><h3>Community</h3><p>A roster of agents who actually answer the phone when you call.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="numbers" style="background:#0a0a0a;">
+  <div class="container">
+    <div class="stats">
+      <div class="stat"><b>100%</b><span>Commission Kept</span></div>
+      <div class="stat"><b>0</b><span>Desk Fees</span></div>
+      <div class="stat"><b>300+</b><span>Agents Nationwide</span></div>
+      <div class="stat"><b>24/7</b><span>Broker Support</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="agents">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Real Agents. Real Talk.</h2>
+    </div>
+    <div class="grid">
+      <div class="testi">
+        <p class="quote">"I went from splitting 45% to keeping everything I earn. Closed more deals in 6 months here than my last 2 years combined."</p>
+        <div class="agent-row"><div class="avatar">M</div><div><div class="name">Marcus</div><div class="role">Agent, Realty ONE Group Apex</div></div></div>
+      </div>
+      <div class="testi">
+        <p class="quote">"My mentor actually picks up the phone. That alone changed how fast I started closing."</p>
+        <div class="agent-row"><div class="avatar">J</div><div><div class="name">Jasmine</div><div class="role">Agent, Realty ONE Group Apex</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="join">
+  <div class="container">
+    <h2>Ready to Keep<span class="gold" style="display:block;">What You Earn?</span></h2>
+    <div class="cta-row" style="justify-content:center; margin-top:2rem;">
+      <a class="btn btn-gold" href="mailto:demo@example.com">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Demo site for illustrative purposes only &mdash; not a real brokerage. &nbsp;|&nbsp; <a href="../index.html" style="text-decoration:underline;">Back to Demos</a>
+</footer>
+
+</body>
+</html>

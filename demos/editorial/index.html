@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Realty ONE Group Fieldstone — Recruiting Site Demo</title>
+<meta name="description" content="Demo recruiting website for Realty ONE Group offices: warm, minimal editorial style.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#f7f2ea; color:#2b2621; font-family:'Work Sans', sans-serif; line-height:1.7; }
+  img { max-width:100%; display:block; }
+  a { color:inherit; text-decoration:none; }
+  .container { max-width:1040px; margin:0 auto; padding:0 1.5rem; }
+  .demo-banner { background:#2b2621; color:#f7f2ea; text-align:center; padding:0.6rem 1rem; font-size:0.8rem; letter-spacing:0.02em; }
+  .demo-banner a { text-decoration:underline; color:#c1673f; }
+  header { position:sticky; top:0; z-index:50; background:#f7f2ea; border-bottom:1px solid #e5ddd0; }
+  header .container { height:84px; display:flex; align-items:center; justify-content:space-between; }
+  .logo-lockup { display:flex; align-items:center; gap:0.75rem; }
+  .logo-lockup img { height:30px; }
+  .logo-lockup .suffix { font-family:'Fraunces',serif; font-weight:600; font-size:1.2rem; color:#c1673f; border-left:1px solid #ddccbb; padding-left:0.75rem; }
+  nav a { font-size:0.85rem; font-weight:500; color:#2b2621; margin-left:2rem; }
+  nav a:hover { color:#c1673f; }
+  .btn { display:inline-flex; align-items:center; gap:0.5rem; font-size:0.85rem; font-weight:600; padding:0.85rem 1.75rem; border-radius:999px; border:1px solid transparent; }
+  .btn-terracotta { background:#c1673f; color:#fff; }
+  .btn-outline { border-color:#2b2621; color:#2b2621; }
+  .hero { padding:6rem 0 5rem; }
+  .eyebrow { font-size:0.85rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#c1673f; margin-bottom:1.25rem; }
+  h1 { font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2.5rem,6vw,4.25rem); line-height:1.05; max-width:760px; }
+  .lead { font-size:1.15rem; color:#5c5347; max-width:540px; margin-top:1.5rem; }
+  .cta-row { display:flex; gap:1rem; flex-wrap:wrap; margin-top:2.5rem; }
+  section { padding:5rem 0; }
+  .section-heading { max-width:600px; margin:0 auto 3rem; text-align:center; }
+  .section-heading h2 { font-family:'Fraunces',serif; font-weight:600; font-size:clamp(1.9rem,3.5vw,2.5rem); }
+  .section-heading p { margin-top:1rem; color:#5c5347; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:2rem; }
+  .card { background:#fff; border-radius:12px; padding:2rem; }
+  .card h3 { font-family:'Fraunces',serif; font-weight:600; font-size:1.15rem; margin-bottom:0.6rem; }
+  .card p { color:#5c5347; font-size:0.95rem; }
+  .pull-quote { background:#2b2621; color:#f7f2ea; border-radius:16px; padding:3.5rem 3rem; text-align:center; }
+  .pull-quote p { font-family:'Fraunces',serif; font-weight:500; font-size:clamp(1.4rem,3vw,2rem); line-height:1.4; max-width:760px; margin:0 auto; }
+  .pull-quote span { display:block; margin-top:1.5rem; font-family:'Work Sans',sans-serif; font-size:0.9rem; color:#c1673f; }
+  .testi { background:#fff; border-radius:12px; padding:2rem; }
+  .testi .quote { font-style:italic; color:#3a342c; margin-bottom:1.5rem; }
+  .avatar { width:46px; height:46px; border-radius:50%; background:#c1673f; color:#fff; font-family:'Fraunces',serif; font-weight:600; display:flex; align-items:center; justify-content:center; }
+  .agent-row { display:flex; align-items:center; gap:0.9rem; }
+  .name { font-weight:600; font-size:0.9rem; }
+  .role { font-size:0.82rem; color:#5c5347; }
+  .final { text-align:center; background:#efe6d8; border-radius:20px; margin:0 1.5rem; padding:4rem 2rem; }
+  .final h2 { font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2rem,4.5vw,3rem); }
+  .final .cta-row { justify-content:center; }
+  footer { padding:2.5rem 0; text-align:center; color:#5c5347; font-size:0.85rem; }
+  @media (max-width:780px){ nav { display:none; } }
+</style>
+</head>
+<body>
+
+<div class="demo-banner">Demo Site &mdash; Realty ONE Group Recruiting Website Concept &nbsp;|&nbsp; <a href="../index.html">Back to Demos</a></div>
+
+<header>
+  <div class="container">
+    <div class="logo-lockup"><img src="../../assets/realty-one-group-corporate-logo.png" alt="Realty ONE Group"><span class="suffix">FIELDSTONE</span></div>
+    <nav>
+      <a href="#culture">Culture</a>
+      <a href="#values">Values</a>
+      <a href="#agents">Agents</a>
+      <a href="#join">Reach Out</a>
+    </nav>
+    <a class="btn btn-terracotta" href="#join">Join the Collective</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">Realty ONE Group Fieldstone</p>
+    <h1>Real Estate, Done Human.</h1>
+    <p class="lead">A collective for agents who want community over competition, and a fair split without the fine print.</p>
+    <div class="cta-row">
+      <a class="btn btn-terracotta" href="#join">Join the Collective</a>
+      <a class="btn btn-outline" href="#culture">Meet the Team</a>
+    </div>
+  </div>
+</section>
+
+<section id="culture">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Why Agents Choose Fieldstone</h2>
+      <p>We built the brokerage we always wished we had &mdash; supportive, transparent, and small enough to actually know each other.</p>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>Community-First Culture</h3><p>Monthly gatherings, shared wins, and agents who genuinely root for each other.</p></div>
+      <div class="card"><h3>Fair, Transparent Splits</h3><p>No hidden fees, no fine print. You'll always know exactly what you keep.</p></div>
+      <div class="card"><h3>Local Market Expertise</h3><p>Deep roots in the neighborhoods we serve, not a franchise playbook.</p></div>
+      <div class="card"><h3>Work-Life Balance</h3><p>Built by agents who wanted a career, not a second job on top of their first one.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="values">
+  <div class="container">
+    <div class="pull-quote">
+      <p>"We didn't want to build the biggest brokerage. We wanted to build the one agents actually want to come home to."</p>
+      <span>&mdash; Fieldstone Founding Team</span>
+    </div>
+  </div>
+</section>
+
+<section id="agents">
+  <div class="container">
+    <div class="section-heading">
+      <h2>From Our Agents</h2>
+    </div>
+    <div class="grid">
+      <div class="testi">
+        <p class="quote">"I left a big-box brokerage where I was a number. Here, people actually know my name and my goals."</p>
+        <div class="agent-row"><div class="avatar">T</div><div><div class="name">Talia</div><div class="role">Agent, Realty ONE Group Fieldstone</div></div></div>
+      </div>
+      <div class="testi">
+        <p class="quote">"The split is fair and I know exactly what I'm getting. No surprises, no games."</p>
+        <div class="agent-row"><div class="avatar">O</div><div><div class="name">Owen</div><div class="role">Agent, Realty ONE Group Fieldstone</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="join">
+  <div class="final">
+    <h2>Curious If We're a Fit?</h2>
+    <div class="cta-row">
+      <a class="btn btn-terracotta" href="mailto:demo@example.com">Reach Out</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Demo site for illustrative purposes only &mdash; not a real brokerage. &nbsp;|&nbsp; <a href="../index.html" style="text-decoration:underline; color:#c1673f;">Back to Demos</a>
+</footer>
+
+</body>
+</html>
