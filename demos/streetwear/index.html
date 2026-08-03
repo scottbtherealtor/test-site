@@ -11,7 +11,7 @@
   body { background:#000; color:#fff; font-family:'Open Sans', sans-serif; line-height:1.6; }
   img { max-width:100%; display:block; }
   a { color:inherit; text-decoration:none; }
-  .container { max-width:1120px; margin:0 auto; padding:0 1.5rem; }
+  .container { max-width:1120px; margin:0 auto; padding:0 1.5rem; position:relative; z-index:1; }
   .demo-banner { background:#d8b25c; color:#000; text-align:center; padding:0.6rem 1rem; font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.8rem; letter-spacing:0.06em; text-transform:uppercase; }
   .demo-banner a { text-decoration:underline; }
   header { position:sticky; top:0; z-index:50; height:76px; background:#000; border-bottom:1px solid #27272a; }
@@ -24,30 +24,43 @@
   .btn { display:inline-flex; align-items:center; gap:0.5rem; font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; padding:0.8rem 1.6rem; border-radius:4px; border:2px solid transparent; }
   .btn-gold { background:#d8b25c; color:#000; }
   .btn-outline { border-color:rgba(216,178,92,.4); color:#fff; }
-  .hero { padding:6rem 0 5rem; background: radial-gradient(circle at 30% 20%, #1a1a1a, #000 60%); }
+
+  /* Diagonal gold stripes — Apex's signature texture */
+  .stripes { position:relative; overflow:hidden; }
+  .stripes::before {
+    content:''; position:absolute; inset:-20%; z-index:0;
+    background: repeating-linear-gradient(45deg, rgba(216,178,92,.07) 0px, rgba(216,178,92,.07) 2px, transparent 2px, transparent 26px);
+  }
+
+  .hero { position:relative; padding:6rem 0 5rem; background: radial-gradient(circle at 25% 15%, #262016 0%, #000 55%), radial-gradient(circle at 90% 90%, #1a1a1a 0%, #000 60%); }
   .eyebrow { font-family:'Montserrat',sans-serif; font-size:0.8rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#d8b25c; margin-bottom:1rem; }
   h1 { font-family:'Bebas Neue',sans-serif; text-transform:uppercase; font-size:clamp(2.75rem,8vw,6rem); line-height:0.95; letter-spacing:0.01em; }
   h1 .gold { color:#d8b25c; display:block; }
   .lead { font-size:1.15rem; color:rgba(255,255,255,.8); max-width:600px; margin-top:1.5rem; }
   .cta-row { display:flex; gap:1rem; flex-wrap:wrap; margin-top:2.5rem; }
-  section { padding:5rem 0; }
+  section { padding:5rem 0; position:relative; }
   .section-heading { text-align:center; max-width:600px; margin:0 auto 3rem; }
   .section-heading h2 { font-family:'Bebas Neue',sans-serif; text-transform:uppercase; font-size:clamp(2rem,4vw,2.75rem); color:#d8b25c; }
   .section-heading p { margin-top:1rem; color:rgba(255,255,255,.65); }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1.5rem; }
-  .card { background:#161616; border:2px solid rgba(216,178,92,.2); padding:1.75rem; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:2rem 1.5rem; }
+  .card { background:#161616; border:2px solid rgba(216,178,92,.2); padding:1.75rem; border-radius:0; transition:border-color .2s, transform .2s; }
+  .card:nth-child(odd) { transform:rotate(-1deg); }
+  .card:nth-child(even) { transform:rotate(1deg); }
+  .card:hover { border-color:#d8b25c; }
   .card h3 { font-family:'Montserrat',sans-serif; text-transform:uppercase; font-size:1rem; letter-spacing:0.04em; margin-bottom:0.5rem; }
   .card p { color:rgba(255,255,255,.65); font-size:0.92rem; }
+  .stats-section { background: linear-gradient(180deg, #0a0a0a 0%, #000 100%); }
   .stats { display:flex; flex-wrap:wrap; justify-content:center; gap:3rem; text-align:center; }
   .stat b { display:block; font-family:'Bebas Neue',sans-serif; font-size:2.75rem; color:#d8b25c; }
   .stat span { font-family:'Montserrat',sans-serif; font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,.6); }
-  .testi { background:#161616; border:1px solid #27272a; border-radius:6px; padding:1.75rem; }
+  .divider { height:1px; max-width:1120px; margin:0 auto; background:linear-gradient(90deg, transparent, rgba(216,178,92,.5), transparent); }
+  .testi { background:#161616; border:1px solid #27272a; border-radius:0; padding:1.75rem; border-left:2px solid rgba(216,178,92,.5); }
   .testi .quote { font-style:italic; color:rgba(255,255,255,.85); margin-bottom:1.25rem; }
   .avatar { width:44px; height:44px; border-radius:50%; background:#d8b25c; color:#000; font-family:'Montserrat',sans-serif; font-weight:800; display:flex; align-items:center; justify-content:center; }
   .agent-row { display:flex; align-items:center; gap:0.85rem; }
   .name { font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.9rem; text-transform:uppercase; }
   .role { font-size:0.8rem; color:rgba(255,255,255,.55); }
-  .final { text-align:center; border-top:1px solid #27272a; }
+  .final { text-align:center; border-top:1px solid #27272a; background: radial-gradient(circle at 50% 120%, #262016 0%, #000 60%); }
   .final h2 { font-family:'Bebas Neue',sans-serif; text-transform:uppercase; font-size:clamp(2rem,5vw,3.5rem); }
   footer { padding:2.5rem 0; text-align:center; border-top:1px solid #27272a; color:rgba(255,255,255,.5); font-size:0.85rem; }
   @media (max-width:780px){ nav { display:none; } }
@@ -70,7 +83,7 @@
   </div>
 </header>
 
-<section class="hero">
+<section class="hero stripes">
   <div class="container">
     <p class="eyebrow">Realty ONE Group Apex</p>
     <h1>Stop Splitting<span class="gold">Your Paycheck.</span></h1>
@@ -97,7 +110,9 @@
   </div>
 </section>
 
-<section id="numbers" style="background:#0a0a0a;">
+<div class="divider"></div>
+
+<section id="numbers" class="stats-section stripes">
   <div class="container">
     <div class="stats">
       <div class="stat"><b>100%</b><span>Commission Kept</span></div>
@@ -126,7 +141,7 @@
   </div>
 </section>
 
-<section class="final" id="join">
+<section class="final stripes" id="join">
   <div class="container">
     <h2>Ready to Keep<span class="gold" style="display:block;">What You Earn?</span></h2>
     <div class="cta-row" style="justify-content:center; margin-top:2rem;">

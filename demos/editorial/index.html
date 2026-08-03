@@ -21,39 +21,44 @@
   .logo-lockup .suffix { font-family:'Fraunces',serif; font-weight:600; font-size:1.2rem; color:#c5a95e; border-left:1px solid #333; padding-left:0.75rem; }
   nav a { font-size:0.85rem; font-weight:500; color:rgba(255,255,255,.8); margin-left:2rem; }
   nav a:hover { color:#c5a95e; }
-  .btn { display:inline-flex; align-items:center; gap:0.5rem; font-size:0.85rem; font-weight:600; padding:0.85rem 1.75rem; border-radius:999px; border:1px solid transparent; }
+  .btn { display:inline-flex; align-items:center; gap:0.5rem; font-size:0.85rem; font-weight:600; padding:0.9rem 1.9rem; border-radius:999px; border:1px solid transparent; }
   .btn-gold { background:#c5a95e; color:#000; }
   .btn-outline { border-color:rgba(255,255,255,.4); color:#fff; }
-  .hero { padding:6rem 0 5rem; }
+
+  /* Gradient divider bars — Fieldstone's signature texture */
+  .divider-bar { height:2px; max-width:280px; margin:0 auto; background:linear-gradient(90deg, transparent, rgba(197,169,94,.8), transparent); }
+
+  .hero { padding:7rem 0 6rem; background: linear-gradient(180deg, #0d0d0d 0%, #000 100%); text-align:center; }
   .eyebrow { font-size:0.85rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#c5a95e; margin-bottom:1.25rem; }
-  h1 { font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2.5rem,6vw,4.25rem); line-height:1.05; max-width:760px; }
-  .lead { font-size:1.15rem; color:rgba(255,255,255,.7); max-width:540px; margin-top:1.5rem; }
-  .cta-row { display:flex; gap:1rem; flex-wrap:wrap; margin-top:2.5rem; }
-  section { padding:5rem 0; }
-  .section-heading { max-width:600px; margin:0 auto 3rem; text-align:center; }
+  h1 { font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2.5rem,6vw,4.5rem); line-height:1.08; max-width:780px; margin:0 auto; }
+  .lead { font-size:1.15rem; color:rgba(255,255,255,.7); max-width:540px; margin:1.75rem auto 0; }
+  .cta-row { display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; margin-top:3rem; }
+  section { padding:6.5rem 0; }
+  .section-heading { max-width:600px; margin:0 auto 3.5rem; text-align:center; }
+  .section-heading .divider-bar { margin-bottom:1.5rem; }
   .section-heading h2 { font-family:'Fraunces',serif; font-weight:600; font-size:clamp(1.9rem,3.5vw,2.5rem); color:#c5a95e; }
-  .section-heading p { margin-top:1rem; color:rgba(255,255,255,.65); }
+  .section-heading p { margin-top:1.25rem; color:rgba(255,255,255,.65); }
   .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:2rem; }
-  .card { background:#161616; border:1px solid #27272a; border-radius:12px; padding:2rem; }
-  .card h3 { font-family:'Fraunces',serif; font-weight:600; font-size:1.15rem; margin-bottom:0.6rem; }
+  .card { background:#161616; border:1px solid #27272a; border-radius:24px; padding:2.25rem; }
+  .card h3 { font-family:'Fraunces',serif; font-weight:600; font-size:1.15rem; margin-bottom:0.75rem; }
   .card p { color:rgba(255,255,255,.65); font-size:0.95rem; }
   .pull-quote-section { background:#f5f5f5; }
-  .pull-quote { background:#000; color:#fff; border-radius:16px; padding:3.5rem 3rem; text-align:center; }
+  .pull-quote { background:#000; color:#fff; border-radius:28px; padding:4rem 3rem; text-align:center; }
   .pull-quote p { font-family:'Fraunces',serif; font-weight:500; font-size:clamp(1.4rem,3vw,2rem); line-height:1.4; max-width:760px; margin:0 auto; }
-  .pull-quote span { display:block; margin-top:1.5rem; font-family:'Work Sans',sans-serif; font-size:0.9rem; color:#c5a95e; }
+  .pull-quote span { display:block; margin-top:1.75rem; font-family:'Work Sans',sans-serif; font-size:0.9rem; color:#c5a95e; }
   .testi-section { background:#f5f5f5; color:#000; }
   .testi-section .section-heading h2 { color:#000; }
   .testi-section .section-heading p { color:#595959; }
-  .testi { background:#fff; border:1px solid #e3e3e3; border-radius:12px; padding:2rem; }
-  .testi .quote { font-style:italic; color:#222; margin-bottom:1.5rem; }
-  .avatar { width:46px; height:46px; border-radius:50%; background:#c5a95e; color:#000; font-family:'Fraunces',serif; font-weight:600; display:flex; align-items:center; justify-content:center; }
-  .agent-row { display:flex; align-items:center; gap:0.9rem; }
+  .testi { background:#fff; border:1px solid #e3e3e3; border-radius:24px; padding:2.25rem; }
+  .testi .quote { font-style:italic; color:#222; margin-bottom:1.75rem; }
+  .avatar { width:48px; height:48px; border-radius:50%; background:#c5a95e; color:#000; font-family:'Fraunces',serif; font-weight:600; display:flex; align-items:center; justify-content:center; }
+  .agent-row { display:flex; align-items:center; gap:1rem; }
   .name { font-weight:600; font-size:0.9rem; color:#000; }
   .role { font-size:0.82rem; color:#595959; }
-  .final { text-align:center; background:#161616; border:1px solid #27272a; border-radius:20px; margin:0 1.5rem; padding:4rem 2rem; }
+  .final { text-align:center; background:#161616; border:1px solid #27272a; border-radius:32px; margin:0 1.5rem; padding:5rem 2rem; }
   .final h2 { font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2rem,4.5vw,3rem); }
   .final .cta-row { justify-content:center; }
-  footer { padding:2.5rem 0; text-align:center; color:rgba(255,255,255,.5); font-size:0.85rem; }
+  footer { padding:3rem 0; text-align:center; color:rgba(255,255,255,.5); font-size:0.85rem; }
   footer a { color:#c5a95e; }
   @media (max-width:780px){ nav { display:none; } }
 </style>
@@ -87,9 +92,12 @@
   </div>
 </section>
 
+<div class="divider-bar"></div>
+
 <section id="culture">
   <div class="container">
     <div class="section-heading">
+      <div class="divider-bar"></div>
       <h2>Why Agents Choose Fieldstone</h2>
       <p>We built the brokerage we always wished we had &mdash; supportive, transparent, and small enough to actually know each other.</p>
     </div>
@@ -131,6 +139,7 @@
 
 <section id="join">
   <div class="final">
+    <div class="divider-bar" style="margin-bottom:1.75rem;"></div>
     <h2>Curious If We're a Fit?</h2>
     <div class="cta-row">
       <a class="btn btn-gold" href="mailto:demo@example.com">Reach Out</a>

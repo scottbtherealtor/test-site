@@ -22,12 +22,26 @@
   .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.75rem; }
   .demo-card { background:#161616; border:1px solid #27272a; border-radius:10px; overflow:hidden; display:flex; flex-direction:column; transition:border-color .2s; }
   .demo-card:hover { border-color:#c5a95e; }
-  .swatch { height:140px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.35rem; background:linear-gradient(135deg,#000 0%,#1a1a1a 60%,#000 100%); }
-  .swatch small { font-family:'Montserrat',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#c5a95e; opacity:0.75; }
+  .swatch { position:relative; overflow:hidden; height:140px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.35rem; }
+  .swatch > * { position:relative; z-index:1; }
+  .swatch small { font-family:'Montserrat',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#c5a95e; opacity:0.8; }
   .swatch b { font-size:1.4rem; letter-spacing:0.02em; color:#c5a95e; }
+
+  /* Streetwear: diagonal gold stripes over a radial spotlight */
+  .swatch.streetwear { background: radial-gradient(circle at 25% 15%, #262016 0%, #000 55%); }
+  .swatch.streetwear::before { content:''; position:absolute; inset:-20%; background:repeating-linear-gradient(45deg, rgba(216,178,92,.1) 0px, rgba(216,178,92,.1) 2px, transparent 2px, transparent 22px); }
   .swatch.streetwear b { font-family:'Montserrat',sans-serif; font-weight:800; text-transform:uppercase; }
+
+  /* Luxury: gold grid + soft blur orb */
+  .swatch.luxury { background:#000; }
+  .swatch.luxury::before { content:''; position:absolute; inset:0; background-image: linear-gradient(rgba(197,169,94,.14) 1px, transparent 1px), linear-gradient(90deg, rgba(197,169,94,.14) 1px, transparent 1px); background-size:22px 22px; mask-image: radial-gradient(ellipse 70% 80% at 50% 50%, #000 30%, transparent 100%); }
+  .swatch.luxury::after { content:''; position:absolute; width:220px; height:220px; border-radius:50%; background:radial-gradient(circle, rgba(197,169,94,.4), transparent 70%); filter:blur(30px); top:-70px; right:-60px; }
   .swatch.luxury b { font-family:Georgia, serif; }
+
+  /* Editorial: gradient divider bar on a soft vertical wash */
+  .swatch.editorial { background:linear-gradient(180deg, #0d0d0d 0%, #000 100%); flex-direction:column; }
   .swatch.editorial b { font-family:Georgia, serif; }
+  .swatch.editorial .bar { width:70px; height:2px; background:linear-gradient(90deg, transparent, rgba(197,169,94,.9), transparent); margin-top:0.3rem; }
   .demo-body { padding:1.75rem; display:flex; flex-direction:column; flex:1; }
   .demo-body h3 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:1.1rem; margin-bottom:0.6rem; }
   .demo-body p { color:rgba(255,255,255,.65); font-size:0.92rem; flex:1; }
@@ -73,7 +87,7 @@
       </div>
 
       <div class="demo-card">
-        <div class="swatch editorial"><small>Realty ONE Group</small><b>Fieldstone</b></div>
+        <div class="swatch editorial"><small>Realty ONE Group</small><b>Fieldstone</b><div class="bar"></div></div>
         <div class="demo-body">
           <span class="tag">Warm &amp; Community-Led</span>
           <h3>Editorial</h3>
