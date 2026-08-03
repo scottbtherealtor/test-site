@@ -4,52 +4,57 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Realty ONE Group Fieldstone — Recruiting Site Demo</title>
-<meta name="description" content="Demo recruiting website for Realty ONE Group offices: warm, minimal editorial style.">
+<meta name="description" content="Demo recruiting website for Realty ONE Group offices: warm, community-first tone in black and gold.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { background:#f7f2ea; color:#2b2621; font-family:'Work Sans', sans-serif; line-height:1.7; }
+  body { background:#000; color:#fff; font-family:'Work Sans', sans-serif; line-height:1.7; }
   img { max-width:100%; display:block; }
   a { color:inherit; text-decoration:none; }
   .container { max-width:1040px; margin:0 auto; padding:0 1.5rem; }
-  .demo-banner { background:#2b2621; color:#f7f2ea; text-align:center; padding:0.6rem 1rem; font-size:0.8rem; letter-spacing:0.02em; }
-  .demo-banner a { text-decoration:underline; color:#c1673f; }
-  header { position:sticky; top:0; z-index:50; background:#f7f2ea; border-bottom:1px solid #e5ddd0; }
+  .demo-banner { background:#c5a95e; color:#000; text-align:center; padding:0.6rem 1rem; font-size:0.8rem; font-weight:700; letter-spacing:0.02em; }
+  .demo-banner a { text-decoration:underline; }
+  header { position:sticky; top:0; z-index:50; background:#000; border-bottom:1px solid #27272a; }
   header .container { height:84px; display:flex; align-items:center; justify-content:space-between; }
   .logo-lockup { display:flex; align-items:center; gap:0.75rem; }
-  .logo-lockup img { height:30px; }
-  .logo-lockup .suffix { font-family:'Fraunces',serif; font-weight:600; font-size:1.2rem; color:#c1673f; border-left:1px solid #ddccbb; padding-left:0.75rem; }
-  nav a { font-size:0.85rem; font-weight:500; color:#2b2621; margin-left:2rem; }
-  nav a:hover { color:#c1673f; }
+  .logo-lockup img { height:30px; background:#fff; border-radius:4px; padding:0.2rem 0.4rem; }
+  .logo-lockup .suffix { font-family:'Fraunces',serif; font-weight:600; font-size:1.2rem; color:#c5a95e; border-left:1px solid #333; padding-left:0.75rem; }
+  nav a { font-size:0.85rem; font-weight:500; color:rgba(255,255,255,.8); margin-left:2rem; }
+  nav a:hover { color:#c5a95e; }
   .btn { display:inline-flex; align-items:center; gap:0.5rem; font-size:0.85rem; font-weight:600; padding:0.85rem 1.75rem; border-radius:999px; border:1px solid transparent; }
-  .btn-terracotta { background:#c1673f; color:#fff; }
-  .btn-outline { border-color:#2b2621; color:#2b2621; }
+  .btn-gold { background:#c5a95e; color:#000; }
+  .btn-outline { border-color:rgba(255,255,255,.4); color:#fff; }
   .hero { padding:6rem 0 5rem; }
-  .eyebrow { font-size:0.85rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#c1673f; margin-bottom:1.25rem; }
+  .eyebrow { font-size:0.85rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#c5a95e; margin-bottom:1.25rem; }
   h1 { font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2.5rem,6vw,4.25rem); line-height:1.05; max-width:760px; }
-  .lead { font-size:1.15rem; color:#5c5347; max-width:540px; margin-top:1.5rem; }
+  .lead { font-size:1.15rem; color:rgba(255,255,255,.7); max-width:540px; margin-top:1.5rem; }
   .cta-row { display:flex; gap:1rem; flex-wrap:wrap; margin-top:2.5rem; }
   section { padding:5rem 0; }
   .section-heading { max-width:600px; margin:0 auto 3rem; text-align:center; }
-  .section-heading h2 { font-family:'Fraunces',serif; font-weight:600; font-size:clamp(1.9rem,3.5vw,2.5rem); }
-  .section-heading p { margin-top:1rem; color:#5c5347; }
+  .section-heading h2 { font-family:'Fraunces',serif; font-weight:600; font-size:clamp(1.9rem,3.5vw,2.5rem); color:#c5a95e; }
+  .section-heading p { margin-top:1rem; color:rgba(255,255,255,.65); }
   .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:2rem; }
-  .card { background:#fff; border-radius:12px; padding:2rem; }
+  .card { background:#161616; border:1px solid #27272a; border-radius:12px; padding:2rem; }
   .card h3 { font-family:'Fraunces',serif; font-weight:600; font-size:1.15rem; margin-bottom:0.6rem; }
-  .card p { color:#5c5347; font-size:0.95rem; }
-  .pull-quote { background:#2b2621; color:#f7f2ea; border-radius:16px; padding:3.5rem 3rem; text-align:center; }
+  .card p { color:rgba(255,255,255,.65); font-size:0.95rem; }
+  .pull-quote-section { background:#f5f5f5; }
+  .pull-quote { background:#000; color:#fff; border-radius:16px; padding:3.5rem 3rem; text-align:center; }
   .pull-quote p { font-family:'Fraunces',serif; font-weight:500; font-size:clamp(1.4rem,3vw,2rem); line-height:1.4; max-width:760px; margin:0 auto; }
-  .pull-quote span { display:block; margin-top:1.5rem; font-family:'Work Sans',sans-serif; font-size:0.9rem; color:#c1673f; }
-  .testi { background:#fff; border-radius:12px; padding:2rem; }
-  .testi .quote { font-style:italic; color:#3a342c; margin-bottom:1.5rem; }
-  .avatar { width:46px; height:46px; border-radius:50%; background:#c1673f; color:#fff; font-family:'Fraunces',serif; font-weight:600; display:flex; align-items:center; justify-content:center; }
+  .pull-quote span { display:block; margin-top:1.5rem; font-family:'Work Sans',sans-serif; font-size:0.9rem; color:#c5a95e; }
+  .testi-section { background:#f5f5f5; color:#000; }
+  .testi-section .section-heading h2 { color:#000; }
+  .testi-section .section-heading p { color:#595959; }
+  .testi { background:#fff; border:1px solid #e3e3e3; border-radius:12px; padding:2rem; }
+  .testi .quote { font-style:italic; color:#222; margin-bottom:1.5rem; }
+  .avatar { width:46px; height:46px; border-radius:50%; background:#c5a95e; color:#000; font-family:'Fraunces',serif; font-weight:600; display:flex; align-items:center; justify-content:center; }
   .agent-row { display:flex; align-items:center; gap:0.9rem; }
-  .name { font-weight:600; font-size:0.9rem; }
-  .role { font-size:0.82rem; color:#5c5347; }
-  .final { text-align:center; background:#efe6d8; border-radius:20px; margin:0 1.5rem; padding:4rem 2rem; }
+  .name { font-weight:600; font-size:0.9rem; color:#000; }
+  .role { font-size:0.82rem; color:#595959; }
+  .final { text-align:center; background:#161616; border:1px solid #27272a; border-radius:20px; margin:0 1.5rem; padding:4rem 2rem; }
   .final h2 { font-family:'Fraunces',serif; font-weight:600; font-size:clamp(2rem,4.5vw,3rem); }
   .final .cta-row { justify-content:center; }
-  footer { padding:2.5rem 0; text-align:center; color:#5c5347; font-size:0.85rem; }
+  footer { padding:2.5rem 0; text-align:center; color:rgba(255,255,255,.5); font-size:0.85rem; }
+  footer a { color:#c5a95e; }
   @media (max-width:780px){ nav { display:none; } }
 </style>
 </head>
@@ -66,7 +71,7 @@
       <a href="#agents">Agents</a>
       <a href="#join">Reach Out</a>
     </nav>
-    <a class="btn btn-terracotta" href="#join">Join the Collective</a>
+    <a class="btn btn-gold" href="#join">Join the Collective</a>
   </div>
 </header>
 
@@ -76,7 +81,7 @@
     <h1>Real Estate, Done Human.</h1>
     <p class="lead">A collective for agents who want community over competition, and a fair split without the fine print.</p>
     <div class="cta-row">
-      <a class="btn btn-terracotta" href="#join">Join the Collective</a>
+      <a class="btn btn-gold" href="#join">Join the Collective</a>
       <a class="btn btn-outline" href="#culture">Meet the Team</a>
     </div>
   </div>
@@ -97,7 +102,7 @@
   </div>
 </section>
 
-<section id="values">
+<section id="values" class="pull-quote-section">
   <div class="container">
     <div class="pull-quote">
       <p>"We didn't want to build the biggest brokerage. We wanted to build the one agents actually want to come home to."</p>
@@ -106,7 +111,7 @@
   </div>
 </section>
 
-<section id="agents">
+<section id="agents" class="testi-section">
   <div class="container">
     <div class="section-heading">
       <h2>From Our Agents</h2>
@@ -128,13 +133,13 @@
   <div class="final">
     <h2>Curious If We're a Fit?</h2>
     <div class="cta-row">
-      <a class="btn btn-terracotta" href="mailto:demo@example.com">Reach Out</a>
+      <a class="btn btn-gold" href="mailto:demo@example.com">Reach Out</a>
     </div>
   </div>
 </section>
 
 <footer>
-  Demo site for illustrative purposes only &mdash; not a real brokerage. &nbsp;|&nbsp; <a href="../index.html" style="text-decoration:underline; color:#c1673f;">Back to Demos</a>
+  Demo site for illustrative purposes only &mdash; not a real brokerage. &nbsp;|&nbsp; <a href="../index.html">Back to Demos</a>
 </footer>
 
 </body>
