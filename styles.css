@@ -388,32 +388,12 @@ section.light .section-heading p {
   box-shadow: 0 30px 60px rgba(0,0,0,.25);
 }
 
-.form-row { margin-bottom: 1.25rem; }
-
-.form-row label {
-  display: block;
-  font-family: var(--font-label);
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 0.4rem;
+.contact-embed {
+  padding: 1.5rem;
 }
 
-.form-row input,
-.form-row textarea {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--border-light);
-  border-radius: 6px;
-  font-family: var(--font-sans);
-  font-size: 0.95rem;
-}
-
-.form-row input:focus,
-.form-row textarea:focus {
-  outline: none;
-  border-color: var(--gold);
+.contact-embed iframe {
+  min-height: 600px;
 }
 
 /* ---- Final CTA band ---- */

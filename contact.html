@@ -35,25 +35,9 @@
 
 <section class="light">
   <div class="container">
-    <form class="contact-card" action="mailto:scott@rogauthentic.com" method="post" enctype="text/plain">
-      <div class="form-row">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="Name" required>
-      </div>
-      <div class="form-row">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="Email" required>
-      </div>
-      <div class="form-row">
-        <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="Phone">
-      </div>
-      <div class="form-row">
-        <label for="message">What's going on at your current brokerage?</label>
-        <textarea id="message" name="Message" rows="4"></textarea>
-      </div>
-      <button type="submit" class="btn btn-gold" style="width:100%; justify-content:center;">Send It</button>
-    </form>
+    <div class="contact-card contact-embed">
+      <iframe style="border:none;width:100%;" id="my-form-f63uc7" src="https://opnform.com/forms/my-form-f63uc7"></iframe>
+    </div>
   </div>
 </section>
 
@@ -78,5 +62,11 @@
 </footer>
 
 <script src="nav.js"></script>
+<script src="https://opnform.com/widgets/opnform-sdk.min.js"></script>
+<script>
+  opnform.on('submit', function(data) {
+    console.log('Form submitted:', data);
+  });
+</script>
 </body>
 </html>
